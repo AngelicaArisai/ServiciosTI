@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Servicios de TI de Ju&aacute;rez</title>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.c
+ss">
+<style>
+body {
+background-color: beige;
+color: darkgreen;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Servicios de TI de Ju&aacute;rez</h1>
+<div class="row">
+<div class="col-md-6">
+<h2>Ponte en contacto con nuestros expertos</h2>
+<ul id="servicios" class="list-group">
+<li class="list-group-item">Desarrollo de Aplicaciones Web</li>
+<li class="list-group-item">Mantenimiento a equipo de c&oacute;mputo</li>
+<li class="list-group-item">Actualizaci&oacute;n de Infraestructura de 
+Red</li>
+<li class="list-group-item">Hosting</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h2>Consultores</h2>
+<ul id="consultores" class="list-group">
+<li class="list-group-item">
+    <img src="https://yaay.today/__export/1610310287244/sites/yaay/img/2021/01/10/jeeniekim-grid.jpg_2062789929.jpg" alt="Consultor 1" class="img-thumbnail" width="400" height="200">
+<div>
+<h4>Laura Jocelyne Loya</h4>
+<p>paco_perez@consultores.com</p>
+<p>Servicio: Desarrollo de Aplicaciones Web</p>
+</div>
+</li>
+<li class="list-group-item">
+<img src="https://us.123rf.com/450wm/maophotostocker/maophotostocker2008/maophotostocker200800125/156814925-una-mujer-asi%C3%A1tica-de-bonita-y-joven-sonrisa-y-buena-piel-limpio-y-saludable-concepto-de-belleza.jpg" alt="Consultor 2" class="imgthumbnail" width="400" height="300">
+
+<div>
+<h4>Luisa Domínguez Rosales</h4>
+<p>lucho_dominguez@consultores.com</p>
+<p>Servicio: Mantenimiento a equipo de cómputo</p>
+</div>
+</li>
+<!-- Agrega más consultores hasta completar ocho-->
+<li class="list-group-item">
+<img src="https://blog.hubspot.es/hubfs/media/bancosimagenes.jpeg" alt="Consultor 3" class="imgthumbnail" width="400" height="300">
+<div>
+<h4>Mariana Velez Saucedo</h4>
+<p>mario_velez@consultores.com</p>
+<p>Servicio: Actualización de Infraestructura de Red</p>
+</div>
+</li>
+<li class="list-group-item">
+<img src="https://img.freepik.com/foto-gratis/mujer-negocios-trabajo_23-2148499455.jpg" alt="Consultor 4" class="imgthumbnail" width="400" height="300">
+<div>
+<h4>Jenny Moreno L&oacute;pez</h4>
+<p>ivan_moreno@consultores.com</p>
+<p>Servicio: Hosting</p>
+</div>
+</li>
+<li class="list-group-item">
+<img src="https://img.freepik.com/fotos-premium/muy-sonriente-pm-o-empleado-sentado-mesa-trabajo_151013-4727.jpg" alt="Consultor 5" class="imgthumbnail" width="400" height="300">
+<div>
+<h4>Carla Olivas Zapara</h4>
+<p>carla_olivas@consultores.com</p>
+<p>Servicio: Desarrollo de Aplicaciones Web</p>
+</li>
+<li class="list-group-item">
+<img src="https://img.freepik.com/foto-gratis/retrato-mujer-escritorio_23-2148131653.jpg?size=626&ext=jpg&ga=GA1.1.1016474677.1696723200&semt=ais" alt="Consultor 5" class="imgthumbnail" width="400" height="300">
+<div>
+<h4>Angelica Ojeda Quezada</h4>
+<p>carla_olivas@consultores.com</p>
+<p>Servicio: Desarrollo de aplicaciones web
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function() {
+// Cambiar estilo al hacer clic en un servicio
+$('#servicios li').click(function() {
+$(this).addClass('active').siblings().removeClass('active');
+var servicioSeleccionado = $(this).text();
+// Filtrar la lista de consultores por servicio
+$('#consultores li').each(function() {
+var servicio = $(this).find('p:last').text().split(': ')[1];
+if (servicio === servicioSeleccionado) {
+$(this).show();
+} else {
+$(this).hide();
+}
+});
+});
+});
+</script>
+</body>
+</html>
